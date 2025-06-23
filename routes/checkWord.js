@@ -6,7 +6,10 @@ const wordsFrench = isWord('french');
 
 router.post('/', (req, res) => {
     const word = req.body.word;
+    console.log(word);
     const checkWord = wordsFrench.check(word.toLowerCase());
+    console.log(checkWord);
+
     res.json({ result: checkWord });
 });
 
