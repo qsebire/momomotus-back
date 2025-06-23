@@ -6,10 +6,7 @@ const wordsFrench = isWord('french');
 
 router.post('/', (req, res) => {
     const word = req.body.word;
-    const wordWithoutAccent = word
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '');
-    const checkWord = wordsFrench.check(wordWithoutAccent.toLowerCase());
+    const checkWord = wordsFrench.check(word.toLowerCase());
     res.json({ result: checkWord });
 });
 
