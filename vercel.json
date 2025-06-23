@@ -11,8 +11,5 @@
             "src": "/(.*)",
             "dest": "app.js"
         }
-    ],
-    "functions": {
-        "api/**.[jt]s": { "includeFiles": "node_modules/is-word/dictionary/**" }
-    }
+    ]
 }
